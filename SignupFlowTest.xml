@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!-- Showing how to use a dataFactory the xml -->
+<!--   -->
+
+<suite name="Signup Workflow Tests" >
+	<test name = "Test 1"  group-by-instances="true" preserve-order="true">
+		<classes>
+		<class name="testCases.SignUpWorkflowTest"/>
+		</classes>
+	</test>
+
+</suite> <!-- Suite -->

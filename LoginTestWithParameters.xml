@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!-- parallel=Tests to launch multiple (no more than 4 (def in thread count) test classes -->
+<!-- use parallel = classes to identify specific individual tests within the classes      -->
+<!--  Here we are testing 2 test in parallel -->
+<suite name="Login Tests with parameters" parallel="tests" thread-count="2">
+
+	<test name = "Test 1">
+	<parameter name="language" value="en"/>
+	<parameter name="browserType" value="Firefox"/>	
+			<classes>
+			<class name="testCases.LoginTests"/>
+		</classes>
+	</test>
+
+</suite> <!-- Suite -->

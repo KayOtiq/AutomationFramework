@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!-- Showing how to run a test with parameters injected from the xml -->
+<!--  use this to use global logins, global browser setups -->
+
+<suite name="Login Tests with parameters" >
+
+	<test name = "Test 1">
+	<parameter name="language" value="en"/>
+	<parameter name="browserType" value="chrome"/>	
+			<classes>
+			<class name="testCases.LoginTests"/>
+		</classes>
+	</test>
+	<test name = "Tests 2">
+			<classes>
+			<class name="testCases.SignUpTest"/>
+			
+		</classes>
+	</test>
+</suite> <!-- Suite -->

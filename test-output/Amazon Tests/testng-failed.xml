@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Amazon Tests]">
+  <test name="P1 Test(failed)">
+    <groups>
+      <run>
+        <include name="p1"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="testCases.AmazonTests">
+        <methods>
+          <include name="teardown"/>
+          <include name="loadPage"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testCases.AmazonTests -->
+    </classes>
+  </test> <!-- P1 Test(failed) -->
+</suite> <!-- Failed suite [Amazon Tests] -->

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Amazon Tests">
+  <test name="P1 Test">
+  	<groups>
+  		<run>
+  		
+  		<include name="p1"/>
+  		
+  		</run>
+  	</groups>
+  	<classes>
+  		<class name="testCases.AmazonTests"/>
+  	</classes>
+  </test> <!-- Test -->
+  <test name="P2 Test">
+  <groups>
+  		<run>
+  		
+  		<include name="p2"/>
+  		
+  		</run>
+  	</groups>
+  	<classes>
+  		<class name="testCases.AmazonTests"/>
+  	</classes>
+  </test>
+</suite> <!-- Suite -->
