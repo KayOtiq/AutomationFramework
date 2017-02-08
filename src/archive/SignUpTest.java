@@ -1,4 +1,4 @@
-package testCases;
+package archive;
 
 
 import org.openqa.selenium.support.PageFactory;
@@ -6,7 +6,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import pageObjects.BaseTest;
+import testCases.BaseTest;
 import pageObjects.FacebookPage;
 //import utilities.DriverFactory;
 //import utilities.DriverFactory.BrowserType;

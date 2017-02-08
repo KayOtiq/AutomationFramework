@@ -1,17 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Login Tests with parameters]">
+  <parameter name="language" value="en"/>
+  <parameter name="browserType" value="chrome"/>
+  <test name="Test 1(failed)">
+    <parameter name="language" value="en"/>
+    <parameter name="browserType" value="chrome"/>
     <classes>
-      <class name="testCases.CookieTestRefactored">
+      <class name="testCases.AmazonLoginTests">
         <methods>
-          <include name="cleanup"/>
-          <include name="addLanguageCookie"/>
-          <include name="setupCookies"/>
-          <include name="removeCookies"/>
+          <include name="setupBeforeClass"/>
           <include name="setup"/>
+          <include name="cleanup"/>
         </methods>
-      </class> <!-- testCases.CookieTestRefactored -->
+      </class> <!-- testCases.AmazonLoginTests -->
+      <class name="testCases.LoginTests">
+        <methods>
+          <include name="setup"/>
+          <include name="loadPage"/>
+          <include name="testMainLoginPage" invocation-numbers="1"/>
+          <include name="cleanup"/>
+        </methods>
+      </class> <!-- testCases.LoginTests -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test 1(failed) -->
+</suite> <!-- Failed suite [Login Tests with parameters] -->

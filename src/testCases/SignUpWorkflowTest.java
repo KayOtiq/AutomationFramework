@@ -1,29 +1,30 @@
 package testCases;
 
 import java.util.HashMap;
-import java.util.concurrent.TimeUnit;
 
-
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Factory;
 import org.testng.annotations.Test;
 
-import pageObjects.BaseTest;
+import testCases.BaseTest;
+
 import pageObjects.FacebookPage;
+
 import testData.SampleTestData;
+
 import utilities.DriverFactory;
 import utilities.DriverFactory.BrowserType;
 
 public class SignUpWorkflowTest extends BaseTest{
 	
-	public WebDriver driver;
-	public WebDriverWait wait;
 	FacebookPage fbPage;
 	DriverFactory.BrowserType type = BrowserType.CHROME;
+	
+	/*
+	 * This is an example of using a Data Factory, using hash map to pull 
+	 * more than one element of data from a data provide
+	 */
 	
 	HashMap<String, String> signUpMap;
 	

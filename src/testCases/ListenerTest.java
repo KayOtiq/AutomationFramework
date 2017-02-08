@@ -1,11 +1,15 @@
 package testCases;
 
-import static org.testng.Assert.*; //doing this allows us to skip using "Assert.assertTrue()"
+/*
+ * This example was used to demonstrate how to use TestNg listeners to output custom results
+ * into a csv or text file
+ */
+import static org.testng.Assert.*; //doing this allows us to have more fluent code, skip using "Assert.assertTrue()"
 import org.testng.SkipException;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import archive.TestListeners;
+import utilities.TestListeners;
 
 @Listeners(TestListeners.class)
 public class ListenerTest {

@@ -3,7 +3,7 @@
 <!-- Showing how to run a test with parameters injected from the xml -->
 <!--  use this to use global logins, global browser setups -->
 
-<suite name="Login Tests with parameters" >
+<suite name="Login Tests with parameters in parallel" parallel="tests" thread-count="2">
 
 	<test name = "Test 1">
 	<parameter name="language" value="en"/>
@@ -14,7 +14,7 @@
 	</test>
 	<test name = "Tests 2">
 			<classes>
-			<class name="testCases.SignUpTest"/>
+			<class name="testCases.AmazonLoginTests"/>
 			
 		</classes>
 	</test>

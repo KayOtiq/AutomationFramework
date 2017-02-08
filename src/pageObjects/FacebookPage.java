@@ -1,17 +1,21 @@
 package pageObjects;
 
-//import org.openqa.selenium.By;
+/**
+ * This is a working example page object page
+ * 
+ * Use this as a template to page objects
+ * 
+ * Created by Lynda Montanez on 2/6/2017
+ *  
+ */
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import utilities.mWaits;
 
 public class FacebookPage extends BasePage {
-	
-	//public static final String PAGE_TITLE = "Facebook - Log In or Sign up";
-	//public static final String PAGE_URL = "http://www.facebook.com";
 	
 	@FindBy(css="#email") WebElement emailLogin;
 	@FindBy(css="#pass") WebElement passwordLogin;
@@ -28,39 +32,27 @@ public class FacebookPage extends BasePage {
 	@FindBy(id="year") WebElement year;
 	
 	@FindBy(id="sex") WebElement sex;
-	
-	//String emailLogin = "#email"; //id="email"
-	//String passwordLogin = "#pass"; //id="pass"
-	//String submit = "submit"; //
-	
-	//WebDriver driver;
+
 	
 	public FacebookPage (WebDriver driver) {
-	
-		//this.driver = driver;
+
 		super(driver);
 		this.PAGE_TITLE = "Facebook - Log In or Sign up";
 		this.PAGE_URL = "http://www.facebook.com";
 	}
 
 	public void setTextEmailLogin(String txt){
-		//WebElement e = driver.findElement(By.cssSelector(emailLogin));
-		//e.sendKeys(txt);
-		//emailLogin.clear();
-		//emailLogin.sendKeys(txt);
+		// inherited from basePage object
 		setText(emailLogin,txt);
 	}
 	
 	public void setTextPasswordLogin(String txt){
-		//WebElement e = driver.findElement(By.cssSelector(passwordLogin));
-		//e.sendKeys(txt);
-		//passwordLogin.clear();
-		//passwordLogin.sendKeys(txt);
+
 		setText(passwordLogin,txt);
 	}
 	
 	public void clickSubmit() {
-		//submitButton.click();
+		// Inherited from BasePage object
 		clickElement(submitButton);
 	}
 	
@@ -86,6 +78,7 @@ public class FacebookPage extends BasePage {
 	
 	
 	public void setMonth(String val){
+		// Inherited from BasePage object
 		selectDropDown(month,val);
 	}
 	
@@ -97,21 +90,23 @@ public class FacebookPage extends BasePage {
 		selectDropDown(year,val);
 	}
 	
-	public void setSex(String val){
-		
+	public void setSexMale(String val){
+
 		
 	}
 	
 	public void login(String email, String password){
-		wait.until(mWaits.visibilityOfElement(emailLogin));
-		wait.until(ExpectedConditions.elementToBeClickable(emailLogin));
+		
+		//example of using explicit wait to wait when object is visible
+		wait.until(mWaits.visibilityOfElement(emailLogin)); 
+		
+		//example of using explicit wait, expected condition = clicable
+
+		//wait.until(ExpectedConditions.elementToBeClickable(emailLogin));
+		
 		setTextEmailLogin(email);
 		setTextPasswordLogin(password);
 		clickSubmit();
 	}
-	
-	public String getTitle() {
-		return driver.getTitle();
-		
-	}
+
 }

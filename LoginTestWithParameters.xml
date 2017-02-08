@@ -7,9 +7,10 @@
 
 	<test name = "Test 1">
 	<parameter name="language" value="en"/>
-	<parameter name="browserType" value="Firefox"/>	
+	<parameter name="browserType" value="Chrome"/>	
 			<classes>
-			<class name="testCases.LoginTests"/>
+			<!-- <class name="testCases.LoginTests"/> -->
+			<class name="testCases.LoginTestsWithBaseClass"/>
 		</classes>
 	</test>
 

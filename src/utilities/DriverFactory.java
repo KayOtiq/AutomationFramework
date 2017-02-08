@@ -7,11 +7,22 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class DriverFactory {
+	
 	public enum BrowserType {
-		FIREFOX,
-		CHROME,
-		IE,
-		SAFARI
+		FIREFOX("firefox"),
+		CHROME("chrome"),
+		IE("ie"),
+		SAFARI("safari");  //haven't implemented this one yet
+		
+		private String val;
+		
+		BrowserType(String val) {
+			this.val = val;
+		}
+		
+		public String getBrowserName() {
+			return this.val;
+		}
 	}
 
 	

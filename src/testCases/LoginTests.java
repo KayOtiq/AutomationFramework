@@ -84,7 +84,7 @@ public class LoginTests {
 		fbPage.login(email, password);
 		//Assert.assertEquals(driver.getTitle(), "Facebook");
 		
-		System.out.println(fbPage.getTitle());
+		System.out.println(fbPage.getPageTitle());
 		/*
 		if (StringUtils.isBlank(errorType)){
 			boolean result = fbLoginPage.checkErrorHeader(errorType);

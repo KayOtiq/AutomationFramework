@@ -3,15 +3,22 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="testCases.CookieTestRefactored">
+      <class name="testCases.SignUpWorkflowTest">
         <methods>
-          <include name="cleanup"/>
-          <include name="addLanguageCookie"/>
-          <include name="setupCookies"/>
-          <include name="removeCookies"/>
+          <include name="enterName"/>
+          <include name="enterName"/>
+          <include name="enterName"/>
+          <include name="enterSignupInfo"/>
+          <include name="enterSignupInfo"/>
+          <include name="enterSignupInfo"/>
           <include name="setup"/>
+          <include name="setupBeforeClass"/>
+          <include name="cleanup"/>
+          <include name="loadPage"/>
+          <include name="loadPage"/>
+          <include name="loadPage"/>
         </methods>
-      </class> <!-- testCases.CookieTestRefactored -->
+      </class> <!-- testCases.SignUpWorkflowTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

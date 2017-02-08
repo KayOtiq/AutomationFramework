@@ -1,4 +1,4 @@
-package pageObjects;
+package testCases;
 
 import java.util.concurrent.TimeUnit;
 
@@ -17,12 +17,14 @@ public class BaseTest {
 	final int BASE_TIMEOUT_SECONDS = 5;
 	
 	DriverFactory.BrowserType type = BrowserType.CHROME;
+	
+	//declarations here will run before any in the testCase objects
+	@BeforeClass(groups={"pageLoad"},alwaysRun=true)
+	public void setupBeforeClass() {
 
-	@BeforeClass(alwaysRun=true)
-	public void setup() {
-
-		//Creates webdriver instance
+		//Creates webdriver instance from Driver Factory
         driver = DriverFactory.getDriver(type);
+		
         
         //Setup Explicit WebDriverWait 
         _wait = new WebDriverWait(driver, BASE_TIMEOUT_SECONDS);
@@ -32,6 +34,7 @@ public class BaseTest {
 
 	}
 
+	//will always run after test cases have completed
 	@AfterClass (alwaysRun=true)
 	public void cleanup() {
 		driver.close();
