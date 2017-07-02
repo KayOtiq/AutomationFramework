@@ -108,5 +108,37 @@ public class FacebookPage extends BasePage {
 		setTextPasswordLogin(password);
 		clickSubmit();
 	}
+	
+	/*
+	setFirstName("Test");
+	setLastName("User");
+	setSignUp("TestUser@testing.com");
+	setConfirm("TestUser@testing.com");
+	setPassword("TestPwd@123!");
+	setMonth("3");
+	setDay("21");
+	setYear("1985");
+	*/
+	
+	//create the excel sheet and copy above into it, then run
+	//create testng dataprovider section to read data from excel then run
+	public void SignupPageTest(String firstName, String lastName, String email, String emailConfirm, String password, String month, String day, String year){
+		loadPage();
+		setFirstName(firstName);
+		setLastName(lastName);
+		setSignUp(email);
+		setConfirm(emailConfirm);
+		setPassword(password);
+		setMonth(month);
+		setDay(day);
+		setYear(year);
+		
+	try {//just want a hard wait to see if everything is entered, but do not actually create
+		Thread.sleep(5000);
+	} catch (InterruptedException e){
+		e.printStackTrace();
+	}
+		
+	}
 
 }

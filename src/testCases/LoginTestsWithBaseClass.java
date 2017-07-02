@@ -60,7 +60,7 @@ public class LoginTestsWithBaseClass extends BaseTest {
 	
 	@Test(groups={"p2", "fields"}, dependsOnMethods="loadPage", enabled=false)
 	public void enterEmail() {
-		fbPage.setTextEmailLogin("anthony.vitoli@hotmail.com");
+		fbPage.setTextEmailLogin("lynsa.test@hotmail.com");
 	}
 	
 	@Test(groups={"p2", "fields"}, dependsOnMethods="enterEmail", enabled=false)
@@ -70,8 +70,8 @@ public class LoginTestsWithBaseClass extends BaseTest {
 	
 	//Example Using a test with a data provider and data provider class, located in TestData package
 	// Does the same as above two tests, but pulls data from data provider
-	@Test(groups={"p1"}, dependsOnMethods="loadPage", enabled=true, 
-			dataProviderClass=SampleTestData.class, dataProvider="login" )
+	
+	@Test(groups={"p1"}, dependsOnMethods="loadPage", enabled=true, dataProviderClass=SampleTestData.class, dataProvider="login" )
 	public void testMainLoginPage( String email, String password ) {
 		
 

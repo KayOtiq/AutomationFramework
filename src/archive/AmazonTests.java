@@ -5,7 +5,6 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -29,15 +28,10 @@ public class AmazonTests {
 		//driver.navigate().to("https://www.amazon.com/");
 		driver.get("https://www.amazon.com/");
 	}
-	/*
-	@Test (groups={"p2", "acctLink"}, dependsOnMethods="loadPage")
-	public void clickAcctLnk() {
-        driver.findElement(By.cssSelector("#nav-link-accountList")).click();
-        driver.navigate().back();
-		
-	}
+	
 
-	@Test (groups={"p3", "search"}, dependsOnMethods="clickAcctLnk")
+
+	@Test// (groups={"p3", "search"}, dependsOnMethods="clickAcctLnk")
 	public void search1() {
 		driver.findElement(By.cssSelector("#twotabsearchtextbox")).sendKeys("1984");
 		driver.findElement(By.cssSelector(".nav-input")).click();
@@ -52,9 +46,15 @@ public class AmazonTests {
 		String str = driver.findElement(By.cssSelector("#s-result-count")).getText();
 		System.out.println(str);
 	}
-	*/
+	
 
 	/*
+	 @Test (groups={"p2", "acctLink"}, dependsOnMethods="loadPage")
+	public void clickAcctLnk() {
+        driver.findElement(By.cssSelector("#nav-link-accountList")).click();
+        driver.navigate().back();
+		
+	}
 	@AfterClass//(alwaysRun=true)
 	public void teardown() {
 		//this.driver.close();

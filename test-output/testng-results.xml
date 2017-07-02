@@ -1,100 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="7" passed="7">
+<testng-results skipped="1" failed="0" total="3" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Login Tests with parameters in parallel" duration-ms="61508" started-at="2017-02-07T05:58:16Z" finished-at="2017-02-07T05:59:18Z">
+  <suite name="Default suite" duration-ms="34246" started-at="2017-07-02T00:56:57Z" finished-at="2017-07-02T00:57:31Z">
     <groups>
-      <group name="p1">
-        <method signature="LoginTests.loadPage(java.lang.String)[pri:0, instance:testCases.LoginTests@4b9e13df]" name="loadPage" class="testCases.LoginTests"/>
-        <method signature="LoginTests.testMainLoginPage(java.lang.String, java.lang.String)[pri:0, instance:testCases.LoginTests@4b9e13df]" name="testMainLoginPage" class="testCases.LoginTests"/>
-      </group> <!-- p1 -->
-      <group name="p2">
-        <method signature="AmazonLoginTests.testGetTitle()[pri:0, instance:testCases.AmazonLoginTests@1e88b3c]" name="testGetTitle" class="testCases.AmazonLoginTests"/>
-      </group> <!-- p2 -->
-      <group name="search">
-        <method signature="AmazonLoginTests.testSearch()[pri:0, instance:testCases.AmazonLoginTests@1e88b3c]" name="testSearch" class="testCases.AmazonLoginTests"/>
-      </group> <!-- search -->
-      <group name="p3">
-        <method signature="AmazonLoginTests.testClickAcctLink()[pri:0, instance:testCases.AmazonLoginTests@1e88b3c]" name="testClickAcctLink" class="testCases.AmazonLoginTests"/>
-        <method signature="AmazonLoginTests.testSearch()[pri:0, instance:testCases.AmazonLoginTests@1e88b3c]" name="testSearch" class="testCases.AmazonLoginTests"/>
-      </group> <!-- p3 -->
-      <group name="startup">
-        <method signature="AmazonLoginTests.loadPage(java.lang.String)[pri:0, instance:testCases.AmazonLoginTests@1e88b3c]" name="loadPage" class="testCases.AmazonLoginTests"/>
-      </group> <!-- startup -->
-      <group name="acctLink">
-        <method signature="AmazonLoginTests.testClickAcctLink()[pri:0, instance:testCases.AmazonLoginTests@1e88b3c]" name="testClickAcctLink" class="testCases.AmazonLoginTests"/>
-      </group> <!-- acctLink -->
-      <group name="pageLoads">
-        <method signature="LoginTests.loadPage(java.lang.String)[pri:0, instance:testCases.LoginTests@4b9e13df]" name="loadPage" class="testCases.LoginTests"/>
-        <method signature="AmazonLoginTests.loadPage(java.lang.String)[pri:0, instance:testCases.AmazonLoginTests@1e88b3c]" name="loadPage" class="testCases.AmazonLoginTests"/>
-      </group> <!-- pageLoads -->
     </groups>
-    <test name="Test 1" duration-ms="19125" started-at="2017-02-07T05:58:16Z" finished-at="2017-02-07T05:58:35Z">
-      <class name="testCases.LoginTests">
-        <test-method status="PASS" signature="setup()[pri:0, instance:testCases.LoginTests@4b9e13df]" name="setup" is-config="true" duration-ms="3166" started-at="2017-02-06T21:58:16Z" finished-at="2017-02-06T21:58:19Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="loadPage(java.lang.String)[pri:0, instance:testCases.LoginTests@4b9e13df]" name="loadPage" duration-ms="4230" started-at="2017-02-06T21:58:19Z" finished-at="2017-02-06T21:58:24Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loadPage -->
-        <test-method status="PASS" signature="testMainLoginPage(java.lang.String, java.lang.String)[pri:0, instance:testCases.LoginTests@4b9e13df]" name="testMainLoginPage" duration-ms="4243" started-at="2017-02-06T21:58:24Z" data-provider="login" depends-on-methods="testCases.LoginTests.loadPage" finished-at="2017-02-06T21:58:28Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[anthony.vitoli@hotmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[123456]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testMainLoginPage -->
-        <test-method status="PASS" signature="testMainLoginPage(java.lang.String, java.lang.String)[pri:0, instance:testCases.LoginTests@4b9e13df]" name="testMainLoginPage" duration-ms="3261" started-at="2017-02-06T21:58:28Z" data-provider="login" depends-on-methods="testCases.LoginTests.loadPage" finished-at="2017-02-06T21:58:31Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[123456]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testMainLoginPage -->
-        <test-method status="PASS" signature="cleanup()[pri:0, instance:testCases.LoginTests@4b9e13df]" name="cleanup" is-config="true" duration-ms="4193" started-at="2017-02-06T21:58:31Z" finished-at="2017-02-06T21:58:35Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cleanup -->
-      </class> <!-- testCases.LoginTests -->
-    </test> <!-- Test 1 -->
-    <test name="Tests 2" duration-ms="61508" started-at="2017-02-07T05:58:16Z" finished-at="2017-02-07T05:59:18Z">
-      <class name="testCases.AmazonLoginTests">
-        <test-method status="PASS" signature="setupBeforeClass()[pri:0, instance:testCases.AmazonLoginTests@1e88b3c]" name="setupBeforeClass" is-config="true" duration-ms="3369" started-at="2017-02-06T21:58:16Z" finished-at="2017-02-06T21:58:20Z">
+    <test name="Default test" duration-ms="34246" started-at="2017-07-02T00:56:57Z" finished-at="2017-07-02T00:57:31Z">
+      <class name="testCases.AmazonSearchTest">
+        <test-method status="PASS" signature="setupBeforeClass()[pri:0, instance:testCases.AmazonSearchTest@2b98378d]" name="setupBeforeClass" is-config="true" duration-ms="3670" started-at="2017-07-01T17:56:57Z" finished-at="2017-07-01T17:57:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupBeforeClass -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:testCases.AmazonLoginTests@1e88b3c]" name="setup" is-config="true" duration-ms="2" started-at="2017-02-06T21:58:20Z" finished-at="2017-02-06T21:58:20Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:testCases.AmazonSearchTest@2b98378d]" name="setup" is-config="true" duration-ms="13" started-at="2017-07-01T17:57:00Z" finished-at="2017-07-01T17:57:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="loadPage(java.lang.String)[pri:0, instance:testCases.AmazonLoginTests@1e88b3c]" name="loadPage" duration-ms="10398" started-at="2017-02-06T21:58:20Z" finished-at="2017-02-06T21:58:30Z">
+        <test-method status="PASS" signature="loadPage(java.lang.String)[pri:0, instance:testCases.AmazonSearchTest@2b98378d]" name="loadPage" duration-ms="26392" started-at="2017-07-01T17:57:00Z" finished-at="2017-07-01T17:57:27Z">
           <params>
             <param index="0">
               <value>
@@ -105,23 +26,46 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadPage -->
-        <test-method status="PASS" signature="testClickAcctLink()[pri:0, instance:testCases.AmazonLoginTests@1e88b3c]" name="testClickAcctLink" duration-ms="3215" started-at="2017-02-06T21:58:30Z" depends-on-methods="testCases.AmazonLoginTests.loadPage" finished-at="2017-02-06T21:58:33Z">
+        <test-method status="SKIP" signature="SearchAmazonWithExcelData(java.lang.String)[pri:0, instance:testCases.AmazonSearchTest@2b98378d]" name="SearchAmazonWithExcelData" duration-ms="0" started-at="2017-07-01T17:57:27Z" data-provider="searchAmazon" depends-on-methods="testCases.AmazonSearchTest.loadPage" finished-at="2017-07-01T17:57:27Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:150)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:430)
+	at org.testng.internal.Invoker.handleParameters(Invoker.java:1270)
+	at org.testng.internal.Invoker.createParameters(Invoker.java:985)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1075)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.run(TestNG.java:1048)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testClickAcctLink -->
-        <test-method status="PASS" signature="testGetTitle()[pri:0, instance:testCases.AmazonLoginTests@1e88b3c]" name="testGetTitle" duration-ms="1" started-at="2017-02-06T21:58:33Z" depends-on-methods="testCases.AmazonLoginTests.loadPage" finished-at="2017-02-06T21:58:33Z">
+        </test-method> <!-- SearchAmazonWithExcelData -->
+        <test-method status="PASS" signature="testGetTitle()[pri:0, instance:testCases.AmazonSearchTest@2b98378d]" name="testGetTitle" duration-ms="2" started-at="2017-07-01T17:57:27Z" depends-on-methods="testCases.AmazonSearchTest.loadPage" finished-at="2017-07-01T17:57:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGetTitle -->
-        <test-method status="PASS" signature="testSearch()[pri:0, instance:testCases.AmazonLoginTests@1e88b3c]" name="testSearch" duration-ms="39991" started-at="2017-02-06T21:58:33Z" depends-on-methods="testCases.AmazonLoginTests.loadPage" finished-at="2017-02-06T21:59:13Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testSearch -->
-        <test-method status="PASS" signature="cleanup()[pri:0, instance:testCases.AmazonLoginTests@1e88b3c]" name="cleanup" is-config="true" duration-ms="4520" started-at="2017-02-06T21:59:13Z" finished-at="2017-02-06T21:59:18Z">
+        <test-method status="PASS" signature="cleanup()[pri:0, instance:testCases.AmazonSearchTest@2b98378d]" name="cleanup" is-config="true" duration-ms="4115" started-at="2017-07-01T17:57:27Z" finished-at="2017-07-01T17:57:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanup -->
-      </class> <!-- testCases.AmazonLoginTests -->
-    </test> <!-- Tests 2 -->
-  </suite> <!-- Login Tests with parameters in parallel -->
+      </class> <!-- testCases.AmazonSearchTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

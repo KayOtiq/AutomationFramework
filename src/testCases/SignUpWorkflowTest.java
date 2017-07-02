@@ -10,7 +10,6 @@ import org.testng.annotations.Test;
 import testCases.BaseTest;
 
 import pageObjects.FacebookPage;
-
 import testData.SampleTestData;
 
 import utilities.DriverFactory;
@@ -21,6 +20,7 @@ public class SignUpWorkflowTest extends BaseTest{
 	FacebookPage fbPage;
 	DriverFactory.BrowserType type = BrowserType.CHROME;
 	
+
 	/*
 	 * This is an example of using a Data Factory, using hash map to pull 
 	 * more than one element of data from a data provide
@@ -59,6 +59,9 @@ public class SignUpWorkflowTest extends BaseTest{
 	    fbPage = PageFactory.initElements(driver, FacebookPage.class);
 	
 	}
+	
+	//Learning how to use the @Factory with DataProviders in TestNG
+
 	/*
 	 * 
 	 * The @AfterClass gets removed because it is now part of the BaseTest
@@ -68,6 +71,8 @@ public class SignUpWorkflowTest extends BaseTest{
 		this.driver.quit();
 	}
 	*/
+	
+
 	@Test
 	public void loadPage(){
 		fbPage.loadPage();	
@@ -96,4 +101,7 @@ public class SignUpWorkflowTest extends BaseTest{
 		fbPage.setYear("1985");
 	}
 	
+	
+
 }
+

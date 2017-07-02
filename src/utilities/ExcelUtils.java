@@ -70,37 +70,63 @@ public class ExcelUtils {
 			   for (int j=startCol;j<=totalCols;j++, cj++)
 
 			   {
-
 				   tabArray[ci][cj]=getCellData(iTestCaseRow,j);
 
 				   System.out.println(tabArray[ci][cj]);
-
 			   }
-
 		}
-
 		catch (FileNotFoundException e)
 
 		{
-
 			Log.error("Class ExcelUtil | Method getTableArray | Exception desc :  Could not read the Excel sheet.  " + e.getMessage());
 			e.printStackTrace();
-
 		}
 
 		catch (IOException e)
-
 		{
-
 			Log.error("Class ExcelUtil | Method getTableArray | Exception desc :  Could not read the Excel sheet.  " + e.getMessage());
 			e.printStackTrace();
-
 		}
 
 		return(tabArray);
 
 	}
 	
+	
+/*	
+	public String[][] getExcelData(String filePath, String fileName, String sheetName) throws Exception{
+		String[][] arrayExcelData = null;
+		try {
+			FileInputStream ExcelFile = new FileInputStream(filePath);			
+
+		   // Access the required test data sheet
+		   ExcelWBook = new XSSFWorkbook(ExcelFile);
+		   ExcelWSheet = ExcelWBook.getSheet(sheetName);
+
+			int totalCols = ExcelWSheet.getLastCellNum();
+			//int totalRows = sh.getRows();
+
+			arrayExcelData = new String[totalNoOfRows-1][totalNoOfCols];
+			
+			for (int i= 1 ; i < totalNoOfRows; i++) {
+
+				for (int j=0; j < totalNoOfCols; j++) {
+					arrayExcelData[i-1][j] = sh.getCell(j, i).getContents();
+				}
+
+			}
+			
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+			e.printStackTrace();
+
+		return arrayExcelData;
+	}
+	*/
+	
+
 	public static Object[][] getTableArray(String FilePath, String SheetName) throws Exception {   
 
 		   String[][] tabArray = null;
@@ -217,10 +243,8 @@ public class ExcelUtils {
 			for ( i=0 ; i< rowCount; i++){
 				if  (ExcelUtils.getCellData(i,colNum).equalsIgnoreCase(sTestCaseName)){
 					break;
-				}
-	
-			}
-	
+				}	
+			}	
 			return i;
 	
 				}catch (Exception e){
@@ -231,6 +255,41 @@ public class ExcelUtils {
 	
 			}
 		}
+	
+	public static int getRowCount() throws Exception {
+		
+		try{
+			int RowCount = ExcelWSheet.getLastRowNum() + 1;
+			Log.info("ExcelUtils:  Total number of rows  " + RowCount + " .");	
+			return RowCount;
+	
+		}catch (Exception e){
+	
+			Log.error("Class ExcelUtil | Method getRowCount | Exception desc : "+e.getMessage());
+			System.out.println(e.getMessage());
+	
+			throw (e);	
+		}
+	}
+	
+	public static int getColumnCount(String sheetName) throws Exception {
+		
+		try{
+			Row  = ExcelWSheet.getRow(0); //this should be the header
+			int colCount = Row.getLastCellNum();
+			Log.info("ExcelUtils:  Total number of Columns  " + colCount + " .");	
+			return colCount;
+	
+		}catch (Exception e){
+	
+			Log.error("Class ExcelUtil | Method getRowUsed | Exception desc : "+e.getMessage());
+			System.out.println(e.getMessage());
+	
+			throw (e);
+	
+		}
+	
+	}
 	
 	public static int getRowUsed() throws Exception {
 	

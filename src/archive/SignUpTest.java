@@ -28,7 +28,9 @@ public class SignUpTest extends BaseTest {
 	}
 	
 	@Test(groups={"p1"})
-	public void SignupPageTest(){
+	public void SignupTest(){
+		fbPage.SignupPageTest();
+		/*
 		fbPage.loadPage();
 		fbPage.setFirstName("Test");
 		fbPage.setLastName("User");
@@ -44,6 +46,7 @@ public class SignUpTest extends BaseTest {
 	} catch (InterruptedException e){
 		e.printStackTrace();
 	}
+	*/
 		
 	}
 }

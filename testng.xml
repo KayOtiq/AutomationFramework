@@ -1,25 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Amazon Tests">
-	<test name = "P1 Tests">
-		<groups>
-			<run>
-				<include name="p1"/>
-			</run>
-		</groups>
-		<classes>
-			<class name="testCases.FirstTestCase"/>
-		</classes>
-	</test>
-	<test name = "P2 Tests">
-		<groups>
-			<run>
-				<include name="p2"/>
-			</run>
-		</groups>
-		<classes>
-			<class name="testCases.FirstTestCase"/>
-			
-		</classes>
-	</test>
-</suite> <!-- Suite -->
+<suite name="Examples">
+  <test name="Amazon Tests">
+    <classes>
+      <class name="testCases.AmazonSearchTest"/>
+    </classes>
+  </test> <!-- Amazon Tests -->
+</suite> <!-- Examples -->

@@ -63,7 +63,7 @@ public class LoginTests {
 	
 	@Test(groups={"p2", "fields"}, dependsOnMethods="loadPage", enabled=false)
 	public void enterEmail() {
-		fbPage.setTextEmailLogin("anthony.vitoli@hotmail.com");
+		fbPage.setTextEmailLogin("kotiq.test@hotmail.com");
 	}
 	
 	@Test(groups={"p2", "fields"}, dependsOnMethods="enterEmail", enabled=false)

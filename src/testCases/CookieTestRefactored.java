@@ -13,7 +13,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import pageObjects.BaseTest;
+import testCases.BaseTest;
 import utilities.CookieUtil;
 import utilities.DriverFactory;
 import utilities.DriverFactory.BrowserType;
